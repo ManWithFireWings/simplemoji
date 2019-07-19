@@ -1,0 +1,48 @@
+:root{
+    --x: 0em;
+    --y: 0em;
+    --emojiList: url('spriteLists/apple.png');
+    --listSize: 35em;
+}
+
+/*Apple*/
+
+.simplemoji_apple .simplemoji_heart,
+.simplemoji_apple.simplemoji_heart{
+    --x: 3em;
+    --y: 12em;
+}
+
+.simplemoji_apple .simplemoji_smile,
+.simplemoji_apple.simplemoji_smile{
+    --x: 25em;
+    --y: 28em;
+}
+
+/* Blob */
+
+.simplemoji_blob .simplemoji_heart,
+.simplemoji_blob.simplemoji_heart{
+    --x: 0em;
+    --y: 0em;
+    --listSize: 18em;
+    --emojiList: url('spriteLists/blob.png');
+}
+
+.simplemoji_blob .simplemoji_smile,
+.simplemoji_blob.simplemoji_smile{
+    --x: 15em;
+    --y: 10em;
+    --listSize: 18em;
+    --emojiList: url('spriteLists/blob.png');
+}
+
+.simplemoji:after{
+    height: 1em;
+    width: 1em;
+    content: '';
+    display: inline-block;
+    background: var(--emojiList) calc(var(--x) * -1) calc(var(--y) * -1);
+    background-size: var(--listSize);
+    transform: translateY(0.1em);
+}
